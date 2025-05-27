@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import VenteList from "./components/VenteList";
 import Statistiques from "./components/Statistiques";
 import AjouteVentes from "./components/AjouteVentes";
@@ -11,7 +11,13 @@ const dataVentes = [
 ];
 
 function App() {
-  const [ventes, setVentes] = useState(dataVentes);
+  const [ventes, setVentes] = useState(() => {
+  const donneesLocales = localStorage.getItem("ventes");
+  return donneesLocales ? JSON.parse(donneesLocales) : dataVentes;
+});
+useEffect(() => {
+  localStorage.setItem("ventes", JSON.stringify(ventes));
+}, [ventes]);
   // const [triActif, setTriActif] = useState(false);
 
   const triCroissant = ()=>{
@@ -23,6 +29,7 @@ function App() {
   const AjouterVentes = (vente)=>{
     setVentes([...ventes, vente]);
   }
+  
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial"}}>
       <h1>Dashboard des ventes</h1>
