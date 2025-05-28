@@ -1,6 +1,6 @@
 import React from "react";
 
-function VenteList({ ventes }) {
+function VenteList({ ventes, onModifier, onSupprimer }) {
   return (
     <div>
       <h2>Liste des ventes</h2>
@@ -9,6 +9,8 @@ function VenteList({ ventes }) {
           <li key={vente.id}>
             {vente.produit} – {vente.quantite} unités à {vente.prix}€ → Total :{" "}
             {vente.quantite * vente.prix}€
+            <button onClick={() => onModifier(vente)}>✏️</button>
+            <button onClick={() => onSupprimer(vente.id)}>🗑️</button>
           </li>
         ))}
       </ul>

@@ -15,6 +15,8 @@ function App() {
   const donneesLocales = localStorage.getItem("ventes");
   return donneesLocales ? JSON.parse(donneesLocales) : dataVentes;
 });
+  const [venteEnCours, setVenteEnCours] = useState(null);
+
 useEffect(() => {
   localStorage.setItem("ventes", JSON.stringify(ventes));
 }, [ventes]);
@@ -29,7 +31,7 @@ useEffect(() => {
   const AjouterVentes = (vente)=>{
     setVentes([...ventes, vente]);
   }
-  
+
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial"}}>
       <h1>Dashboard des ventes</h1>
