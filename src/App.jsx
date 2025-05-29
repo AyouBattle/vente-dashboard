@@ -22,12 +22,6 @@ useEffect(() => {
 }, [ventes]);
   // const [triActif, setTriActif] = useState(false);
 
-  const triCroissant = ()=>{
-    const VentesTri = [...dataVentes].sort((a,b)=>(b.prix * b.quantite - a.prix * a.quantite));
-    setVentes(VentesTri);
-    // setTriActif(true);
-  }
-
   const AjouterVentes = (vente)=>{
     setVentes([...ventes, vente]);
   }
@@ -35,9 +29,6 @@ useEffect(() => {
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial"}}>
       <h1>Dashboard des ventes</h1>
-      <button onClick={triCroissant} >
-        🔽 Trier par chiffre d’affaires décroissant
-      </button>
       <Statistiques ventes={ventes} />
       <VenteList ventes={ventes} />
       <AjouteVentes onAjoute={AjouterVentes}/>
