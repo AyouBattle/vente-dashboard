@@ -26,6 +26,10 @@ useEffect(() => {
     setVentes([...ventes, vente]);
   }
 
+  const supprimerVente = ()=>{
+    
+  }
+
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial"}}>
       <h1>Dashboard des ventes</h1>
