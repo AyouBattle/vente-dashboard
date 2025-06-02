@@ -27,6 +27,10 @@ useEffect(() => {
   }
 
   const supprimerVente = ()=>{
+
+  }
+
+  const modifierVente = ()=>{
     
   }
 
