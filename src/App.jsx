@@ -27,12 +27,15 @@ useEffect(() => {
   }
 
   const supprimerVente = ()=>{
+    setVentes()
 
   }
 
   const modifierVente = ()=>{
-    
+
   }
+
+
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial"}}>
