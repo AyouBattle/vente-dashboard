@@ -26,8 +26,8 @@ useEffect(() => {
     setVentes([...ventes, vente]);
   }
 
-  const supprimerVente = ()=>{
-    setVentes()
+  const supprimerVente = (id)=>{
+    setVentes(ventes.filter(v => v.id !== id ))
 
   }
 
@@ -36,7 +36,7 @@ useEffect(() => {
   }
 
   const ajoutModificationVente = ()=>{
-    
+
   }
 
 
