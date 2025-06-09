@@ -20,7 +20,7 @@ function App() {
 useEffect(() => {
   localStorage.setItem("ventes", JSON.stringify(ventes));
 }, [ventes]);
-  // const [triActif, setTriActif] = useState(false);
+  const [triActif, setTriActif] = useState(false);
 
   const AjouterVentes = (vente)=>{
     setVentes([...ventes, vente]);
