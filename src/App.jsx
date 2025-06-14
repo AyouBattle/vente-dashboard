@@ -31,7 +31,7 @@ useEffect(() => {
   }
 
   const modifierVente = ()=>{
-      setVenteEnCours()
+      setVenteEnCours(venteEnCours)
   }
 
   const ajoutModificationVente = ()=>{
