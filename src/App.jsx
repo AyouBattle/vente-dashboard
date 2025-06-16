@@ -35,7 +35,7 @@ useEffect(() => {
   }
 
   const ajoutModificationVente = ()=>{
-      setVentes()
+      setVentes(modifierVente)
   }
 
 
