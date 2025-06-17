@@ -7,7 +7,7 @@ function VenteList({ ventes, onModifier, onSupprimer }) {
       <ul>
         {ventes.map((vente) => (
           <li key={vente.id}>
-            {vente.produit} – {vente.quantite} unités à {vente.prix}€ → Total :{" "}
+            {vente.produit} – {vente.quantite} unités à {vente.prix}€ → Total = {" "}
             {vente.quantite * vente.prix}€{" "}
             <button onClick={() => onModifier(vente)}>✏️</button>
             <button onClick={() => onSupprimer(vente.id)}>🗑️</button>
