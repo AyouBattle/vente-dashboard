@@ -11,7 +11,7 @@ function VenteList({ ventes, onModifier, onSupprimer }) {
             {vente.quantite * vente.prix}€{" "}
             <button onClick={() => onModifier(vente)}>✏️</button>
             <button onClick={() => onSupprimer(vente.id)}>🗑️</button>
-            <button onClick={() => onSupprimer(vente.id)} style={{backgroundColor: "yellow", color: "green"}}>X</button>
+            <button onClick={() => onSupprimer(vente.id)} style={{backgroundColor: "yellow", color: "brown"}}>X</button>
           </li>
         ))}
       </ul>
